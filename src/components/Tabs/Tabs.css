@@ -1,0 +1,15 @@
+/* Panels */
+
+.ds-tabs.p-tabview .p-tabview-nav li.ds-tab-panel .p-tabview-nav-link {
+  @apply bg-transparent border-ds-placeholder text-ds-neutral;
+}
+
+/* Active tab decoration */
+.ds-tabs.p-tabview .p-tabview-nav li.ds-tab-panel.p-highlight .p-tabview-nav-link {
+  @apply bg-transparent border-secondary text-secondary-accent;
+}
+
+/* Tab title */
+.ds-tabs .ds-tabs__nav li.ds-tab-panel span.header-title {
+  @apply text-badge font-sans font-bold text-inherit;
+}

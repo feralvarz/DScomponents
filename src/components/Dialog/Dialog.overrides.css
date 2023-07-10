@@ -1,0 +1,23 @@
+.ds-dialog .p-dialog-content {
+  padding: 0;
+}
+
+.ds-dialog .p-dialog-header {
+  @apply bg-ds-base px-5 py-4;
+}
+
+.ds-dialog .p-dialog-header .p-dialog-title {
+  @apply text-h3;
+}
+
+.ds-dialog .p-dialog .p-dialog-footer {
+  @apply p-6;
+}
+
+.ds-dialog .p-dialog .p-dialog-footer button {
+  margin: 0 0 0 0.75rem;
+}
+
+.ds-dialog .p-dialog .p-dialog-content .p-confirm-dialog-message {
+  @apply ml-0;
+}

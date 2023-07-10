@@ -1,0 +1,39 @@
+th > div > span {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+td > button > .pi {
+    font-size: 1.25rem
+}
+  
+    
+  @media screen and (min-width: 600px) {
+      
+    thead {
+        visibility: visible;
+    }
+    
+    tr {
+        display: table-row;
+        border-bottom-width: 1px;
+        margin-bottom: 0;
+    }
+      
+    td {
+        display: table-cell;
+        text-align: left;
+        font-size: 14px;
+        border-bottom: none;
+    }
+      
+    td:before {
+        content: "";
+        display: none;
+    }
+  }
+  

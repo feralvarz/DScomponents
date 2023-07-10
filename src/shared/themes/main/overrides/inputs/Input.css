@@ -1,0 +1,5 @@
+.p-inputtext:enabled:focus,
+.p-inputtext:enabled:hover {
+  border-color: #c3d4da;
+  box-shadow: none;
+}

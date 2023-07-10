@@ -1,0 +1,28 @@
+import type { StoryObj } from '@storybook/react';
+import { {{pascalCase componentName}} } from './{{pascalCase componentName}}';
+
+export default {
+  title: 'Generated/{{pascalCase componentName}}',
+  component: {{pascalCase componentName}},
+};
+
+const design = {
+  type: 'figma',
+  url:'',
+};
+
+export const Basic: StoryObj<typeof {{pascalCase componentName}}> = {
+  args: {
+    children: 'Hello World',
+    variant: 'foo',
+  },
+  argTypes: {
+    variant: {
+      options: ['foo', 'bar', 'yes'],
+      control: { type: 'select' }
+    }
+  },
+  parameters: {
+    design
+  },
+};

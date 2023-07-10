@@ -1,0 +1,23 @@
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 16px;
+  gap: 8px;
+
+  border-radius: 4px;
+  line-height: 20px;
+  align-items: center;
+  text-transform: none !important;
+
+  position: absolute;
+  height: 36px;
+}
+
+.btn i.icon-left {
+  position: float;
+  left: 20.83%;
+  right: 12.5%;
+  top: 16.67%;
+  bottom: 16.67%;
+}

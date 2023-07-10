@@ -1,0 +1,18 @@
+import ctl from '@netlify/classnames-template-literals';
+import { ExampleVariant } from './{{pascalCase componentName}}.types';
+
+const getVariant = (variant: ExampleVariant) => {
+  const variants = {
+    foo: 'text-h1',
+    bar: 'text-h2',
+    yes: 'text-h3',
+  };
+
+  return variants[variant] || variants.yes;
+};
+
+export const getClassName = (variant: ExampleVariant, className?: string) =>
+  ctl(`
+  ${className}
+  ${getVariant(variant)}
+`);

@@ -1,0 +1,11 @@
+{
+  "primary": "#1A3144",
+  "secondary": "#ACB050",
+  "accent": "#E93266",
+  "neutral": "#2B546B",
+  "base-100": "#F3F3F3",
+  "info": "#279FB9",
+  "success": "#14B8A6",
+  "warning": "#F49C18",
+  "error": "#DC2626"
+}

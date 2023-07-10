@@ -1,0 +1,85 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    @apply text-ds-copy;
+    font-size: 16px;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    height: 100vh;
+  }
+
+  /* TODO: The following type definitions needs to be removed
+    * Typography sizes doesn't need to be tied to specific elements.
+    * Remove after Typography is replaced with Text component in all implementations.
+   */
+
+  h1.typography-component {
+    @apply text-h1;
+  }
+
+  h2.typography-component {
+    @apply text-h2;
+  }
+
+  h3.typography-component {
+    @apply text-h3;
+  }
+
+  p.typography-component {
+    @apply text-base;
+  }
+
+  label.typography-component {
+    @apply font-bold;
+  }
+
+  pre.typography-component {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  .button-base {
+    @apply button-common px-4 py-2 text-base font-bold flex items-center gap-2;
+  }
+
+  .button-small {
+    @apply button-common p-2 text-xs font-semi flex items-center gap-1;
+  }
+
+  .label-base {
+    @apply text-xs leading-6 font-semi text-black;
+  }
+
+  .ds-menu-label {
+    @apply !text-primary hover:!text-secondary-accent text-badge font-semi font-sans truncate min-h-[1.5rem] flex items-center;
+  }
+}
+
+@layer utilities {
+  .disabled {
+    @apply disabled:opacity-60 disabled:pointer-events-none disabled:select-none;
+  }
+
+  .center-content {
+    @apply flex gap-2 place-content-center;
+  }
+
+  .center-first-div {
+    @apply [&>div]:flex  [&>div]:gap-2  [&>div]:place-content-center;
+  }
+
+  .button-common {
+    @apply rounded-md font-sans center-content center-first-div;
+  }
+
+  .ds-input-base {
+    @apply block w-full rounded-md p-2 border focus-visible:outline-ds-neutral/50 text-ds-copy mb-1;
+  }
+}

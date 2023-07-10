@@ -1,0 +1,11 @@
+.ds-date-input .p-inputtext.p-component {
+  @apply border-ds-placeholder border-r-0 shadow-none bg-white text-ds-copy disabled:border-gray-300;
+}
+
+.ds-date-input .p-button.p-component.p-datepicker-trigger.p-button-icon-only {
+  @apply text-ds-copy py-0 w-[unset] px-2 border-ds-placeholder border-l-0 shadow-none overflow-hidden bg-white [&>i]:opacity-80 hover:[&>i]:opacity-100;
+}
+
+.ds-date-input .p-inputtext.p-component:disabled + button.p-datepicker-trigger {
+  @apply disabled:border-gray-300;
+}

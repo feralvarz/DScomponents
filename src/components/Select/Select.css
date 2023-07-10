@@ -1,0 +1,7 @@
+.ds-select.p-dropdown:not(.p-disabled).p-focus {
+  @apply outline-ds-neutral/50 border-ds-neutral/50 shadow-none;
+}
+
+.ds-select.p-dropdown .p-dropdown-label.p-inputtext {
+  @apply px-4 py-2;
+}

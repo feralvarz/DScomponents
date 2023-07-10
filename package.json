@@ -1,0 +1,182 @@
+{
+  "name": "DScomponents",
+  "version": "2.0.0-beta.2",
+  "repository": "https://github.com/feralvarz/DScomponents",
+  "scripts": {
+    "postinstall": "husky install",
+    "build": "tsc && vite build",
+    "storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 6006",
+    "storybook:build": "cross-env NODE_OPTIONS=--openssl-legacy-provider storybook build",
+    "storybook:test": "cross-env NODE_OPTIONS=--openssl-legacy-provider test-storybook",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write",
+    "test:unit": "npx jest --config jest.config.js -- -t 'Typography'",
+    "semantic-release": "semantic-release",
+    "commit": "czg",
+    "component": "plop component"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^17.5.0",
+    "@commitlint/config-conventional": "^17.4.4",
+    "babel-plugin-root-import": "^6.6.0",
+    "czg": "^1.6.1",
+    "husky": "^8.0.3",
+    "next": "^13.4.1",
+    "plop": "^3.1.2",
+    "primeicons": "^6.0.1",
+    "primereact": "9.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remixicon": "^2.5.0",
+    "simplebar-react": "^3.2.4",
+    "tailwind-merge": "^1.13.2",
+    "use-debounce": "^9.0.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-syntax-jsx": "^7.18.6",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@jest/globals": "^29.5.0",
+    "@netlify/classnames-template-literals": "^1.0.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/gitlab": "^12.0.1",
+    "@semantic-release/npm": "^10.0.3",
+    "@semantic-release/release-notes-generator": "^11.0.1",
+    "@storybook/addon-a11y": "^7.0.26",
+    "@storybook/addon-actions": "^7.0.26",
+    "@storybook/addon-docs": "^7.0.26",
+    "@storybook/addon-essentials": "^7.0.26",
+    "@storybook/addon-interactions": "^7.0.26",
+    "@storybook/addon-links": "^7.0.26",
+    "@storybook/addon-mdx-gfm": "^7.0.26",
+    "@storybook/addons": "^7.0.26",
+    "@storybook/client-logger": "next",
+    "@storybook/react": "^7.0.26",
+    "@storybook/react-vite": "^7.0.26",
+    "@storybook/test-runner": "^0.11.0",
+    "@storybook/testing-library": "^0.2.0",
+    "@storybook/theming": "^7.0.26",
+    "@tailwindcss/forms": "^0.5.3",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.13",
+    "babel-jest": "^29.5.0",
+    "babel-loader": "^8.3.0",
+    "cross-env": "^7.0.3",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.12",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.0.1",
+    "postcss": "^8.4.24",
+    "postcss-font-magician": "^3.0.0",
+    "postcss-import": "^15.1.0",
+    "react-test-renderer": "^18.2.0",
+    "semantic-release": "^21.0.2",
+    "storybook": "^7.0.26",
+    "storybook-addon-designs": "^7.0.0-beta.2",
+    "tailwindcss": "^3.3.2",
+    "ts-jest": "^26.1.0",
+    "vite": "^4.1.0",
+    "vite-plugin-dts": "^1.7.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/design-system.umd.js",
+  "module": "./dist/design-system.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/design-system.es.js",
+      "require": "./dist/design-system.umd.js"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/czg",
+      "types": [
+        {
+          "value": "feat",
+          "name": "feat:     ✨  A new feature",
+          "emoji": ":sparkles:"
+        },
+        {
+          "value": "fix",
+          "name": "fix:      🐛  A bug fix",
+          "emoji": ":bug:"
+        },
+        {
+          "value": "docs",
+          "name": "docs:     📝  Documentation only changes",
+          "emoji": ":memo:"
+        },
+        {
+          "value": "style",
+          "name": "style:    💄  Changes that do not affect the meaning of the code",
+          "emoji": ":lipstick:"
+        },
+        {
+          "value": "refactor",
+          "name": "refactor: ♻️   A code change that neither fixes a bug nor adds a feature",
+          "emoji": ":recycle:"
+        },
+        {
+          "value": "perf",
+          "name": "perf:     ⚡️  A code change that improves performance",
+          "emoji": ":zap:"
+        },
+        {
+          "value": "test",
+          "name": "test:     ✅  Adding missing tests or correcting existing tests",
+          "emoji": ":white_check_mark:"
+        },
+        {
+          "value": "build",
+          "name": "build:    📦️   Changes that affect the build system or external dependencies",
+          "emoji": ":package:"
+        },
+        {
+          "value": "ci",
+          "name": "ci:       🎡  Changes to our CI configuration files and scripts",
+          "emoji": ":ferris_wheel:"
+        },
+        {
+          "value": "chore",
+          "name": "chore:    🔨  Other changes that don't modify src or test files",
+          "emoji": ":hammer:"
+        },
+        {
+          "value": "revert",
+          "name": "revert:   ⏪️  Reverts a previous commit",
+          "emoji": ":rewind:"
+        }
+      ],
+      "useEmoji": true,
+      "maxSubjectLength": 80
+    }
+  }
+}

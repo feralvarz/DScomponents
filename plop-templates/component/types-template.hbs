@@ -1,0 +1,7 @@
+export type ExampleVariant = 'foo' | 'bar' | 'yes';
+
+export type {{pascalCase componentName}}Props = {
+  children: React.ReactNode;
+  className?: string;
+  variant: ExampleVariant;
+};

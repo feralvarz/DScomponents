@@ -1,0 +1,21 @@
+{
+  "name": "DS components",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "storybook",
+
+  "remoteUser": "node",
+  "workspaceFolder": "/usr/src/app/",
+  "shutdownAction": "stopCompose",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "unifiedjs.vscode-mdx",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "csstools.postcss"
+      ]
+    }
+  }
+}

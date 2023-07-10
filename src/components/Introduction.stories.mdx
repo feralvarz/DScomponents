@@ -1,0 +1,177 @@
+import { Meta } from '@storybook/blocks';
+import Code from '../assets/code-brackets.svg';
+import Comments from '../assets/comments.svg';
+import Repo from '../assets/repo.svg';
+import StackAlt from '../assets/stackalt.svg';
+
+<Meta title="Design System/Introduction" />
+
+<style>
+  {`
+    .subheading {
+      --mediumdark: '#999999';
+      font-weight: 700;
+      font-size: 13px;
+      color: #999;
+      letter-spacing: 6px;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      margin-top: 40px;
+    }
+
+    .link-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 10px;
+    }
+
+    @media (min-width: 620px) {
+      .link-list {
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media all and (-ms-high-contrast:none) {
+    .link-list {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr;
+      }
+    }
+
+    .link-item {
+      display: block;
+      padding: 20px;
+      border: 1px solid #00000010;
+      border-radius: 5px;
+      transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
+      color: #333333;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .link-item:hover {
+      border-color: #1EA7FD50;
+      transform: translate3d(0, -3px, 0);
+      box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
+    }
+
+    .link-item:active {
+      border-color: #1EA7FD;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .link-item strong {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .link-item img {
+      height: 40px;
+      width: 40px;
+      margin-right: 15px;
+      flex: none;
+    }
+
+    .link-item span,
+    .link-item p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .tip {
+      display: inline-block;
+      border-radius: 1em;
+      font-size: 11px;
+      line-height: 12px;
+      font-weight: 700;
+      background: #E7FDD8;
+      color: #66BF3C;
+      padding: 4px 12px;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    .tip-wrapper {
+      font-size: 13px;
+      line-height: 20px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .tip-wrapper code {
+      font-size: 12px;
+      display: inline-block;
+    }
+  `}
+</style>
+
+# DS components
+
+DS components <u>agiliza el proceso de creación de producto, disminuyendo los costes asociados al desarrollo y mantenimiento de estos</u>. Mediante la creación de componentes de UI, se aísla la lógica comercial, los datos y el contexto de la aplicación, <u>facilitando el desarrollo y reutilización de los mismos</u>.
+Los componentes, mejor conocidos como **historias**, participaran durante el desarrollo, las pruebas y el control de calidad.
+
+**Storybook** es la herramienta utilizada para construir este sistema. Esta permite desarrollar con un proceso [**Component Driven**](https://componentdriven.org) que da como resultado componentes atómicos.
+
+Es posible acceder a todas las historias mediante la navegación en la barra lateral. Para obtener información detallada sobre su funcionamiento, le recomendamos consultar la documentación correspondiente.
+
+<div className="subheading">Beneficios</div>
+
+<div className="link-list">
+  <a className="link-item" target="_blank">
+    <img src={Code} alt="Code" />
+    <span>
+      <strong>Desarrollar interfaces de usuario más duraderas</strong>
+      Puedes aislar componentes y rastrear sus casos de uso como historias, verificando casos difíciles
+      de alcanzar. También cuenta con complementos para simular todo lo que necesita un componente: contexto,
+      solicitudes de API, características del dispositivo, entre otros.
+    </span>
+  </a>
+  <a className="link-item" target="_blank">
+    <img src={StackAlt} alt="Build" />
+    <span>
+      <strong>Probar las interfaces de usuario con menos esfuerzo</strong>
+      Brinda una forma pragmática y reproducible de rastrear los estados del UI, util para probar durante
+      el desarrollo. Design System ofrece flujos de trabajo integrados para pruebas automatizadas de
+      accesibilidad, interacción y visuales. También se pueden usar las historias como casos de prueba
+      importándolas a otras herramientas.
+    </span>
+  </a>
+  <a className="link-item" target="_blank">
+    <img src={Repo} alt="Repo" />
+    <span>
+      <strong>Interfaces de usuario documentadas y reutilizables</strong>
+      Design System debería ser un "source of truth" (fuente de verdad) para su UI. Las historias indexan
+      todos sus componentes y sus diversos estados, lo que facilita que su equipo encuentre y reutilice
+      patrones existentes. También se genera automáticamente documentación a partir de esas historias.
+    </span>
+  </a>
+  <a className="link-item" target="_blank">
+    <img src={Comments} alt="Comments" />
+    <span>
+      <strong>Compartir cómo funciona realmente la interfaz de usuario</strong>
+      Las historias muestran cómo funcionan realmente los componentes, no solo una imagen de cómo se
+      supone que deben funcionar. Eso mantiene a todos alineados con lo que está actualmente en producción.
+      Se puede publicar el Storybook para obtener la aprobación de los compañeros de equipo o cliente.
+      También puede insertarlo en wikis, Markdown y Figma para agilizar la colaboración.
+    </span>
+  </a>
+</div>
+
+<div className="subheading">¿Que es Storybook?</div>
+
+<iframe
+  width="967"
+  height="544"
+  src="https://www.youtube.com/embed/p-LFh5Y89eM"
+  title="What&#39;s Storybook?"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>

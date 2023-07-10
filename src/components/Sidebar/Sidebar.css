@@ -1,0 +1,78 @@
+/* Overrides for PrimeReact PanelMenu component */
+.ds-main-menu {
+  padding-block: 1rem;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow-y: auto;
+  width: 100%;
+  container-type: inline-size;
+}
+
+.ds-main-menu i[class^='ri-'] {
+  font-size: 1.15rem;
+  position: relative;
+  top: 1px;
+}
+
+/* Header label of menu groups */
+.ds-main-menu .p-component.p-panelmenu-header.header-item {
+  width: 100%;
+}
+
+.ds-main-menu .p-component.p-panelmenu-header.header-item a {
+  @apply hover:!bg-transparent pointer-events-none py-2;
+}
+
+.ds-main-menu .ds-menuitem {
+  @apply pl-0 py-1;
+}
+
+.ds-main-menu .p-panelmenu .p-menuitem.ds-menuitem .p-menuitem-link {
+  @apply pl-0 pt-0 pb-2 focus:outline-none focus:shadow-none focus-visible:outline-none focus-visible:shadow-none
+   hover:text-secondary-accent;
+}
+
+.ds-main-menu
+  .p-panelmenu
+  .p-menuitem.ds-menuitem
+  .p-menuitem-link:hover
+  .p-menuitem-text.ds-menu-label {
+  @apply !text-secondary-accent;
+}
+
+.ds-main-menu .ds-menuitem .p-panelmenu-icon {
+  @apply order-2 ml-auto;
+}
+
+.ds-main-menu .p-panelmenu-header > a.p-panelmenu-header-link {
+  @apply border-0 px-4 py-3 !rounded-none bg-transparent hover:!bg-primary;
+}
+
+.ds-main-menu .p-panelmenu-header.p-highlight {
+  outline: none;
+}
+
+.ds-main-menu .p-panelmenu .p-panelmenu-header > a:focus {
+  box-shadow: none;
+}
+
+.ds-main-menu .p-panelmenu-header > a.p-panelmenu-header-link .p-panelmenu-icon {
+  order: 1;
+  margin-left: auto;
+}
+
+.ds-main-menu .p-panelmenu .p-panelmenu-content {
+  @apply border-0 bg-transparent ml-4;
+}
+
+.ds-main-menu .p-panelmenu .p-panelmenu-content .p-menuitem-link {
+  @apply pl-8;
+}
+
+@container (max-width: 3rem) {
+  /* Header label of menu groups */
+  .ds-main-menu .p-component.p-panelmenu-header.header-item,
+  .ds-main-menu .ds-menu-label span {
+    display: none;
+  }
+}

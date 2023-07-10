@@ -1,0 +1,16 @@
+import { memo } from 'react';
+
+import type { {{pascalCase componentName}}Props } from './{{pascalCase componentName}}.types';
+import { getClassName } from './{{pascalCase componentName}}.styles';
+
+/**
+ * Basic Component primitive.
+ *
+ * @param variant - One of the following: `foo`, `bar`, `yes`.
+ * @param children - The content for this component.
+ */
+export const {{pascalCase componentName}} = memo(function {{pascalCase componentName}}(props: {{pascalCase componentName}}Props) {
+  const { variant, children } = props;
+
+  return <div className={getClassName(variant, props?.className)}>{children}</div>;
+});

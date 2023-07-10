@@ -1,0 +1,8 @@
+/* Third-party CSS */
+@import 'primereact/resources/themes/tailwind-light/theme.css';
+@import 'primereact/resources/primereact.min.css';
+@import 'primeicons/primeicons.css';
+@import 'remixicon/fonts/remixicon.css';
+
+/* Custom CSS */
+@import '../tailwind.css';

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  storybook:
+    build:
+      context: ../
+      dockerfile: ./.devcontainer/Dockerfile
+    volumes:
+      - ../:/usr/src/app
+    working_dir: /usr/src/app/
+    entrypoint: /bin/bash
+    environment:
+      - NODE_ENV=development
+    command:
+      - "-c"
+      - "echo Container started ; trap \"exit 0\" 15; sleep infinity;"
